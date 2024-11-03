@@ -1,0 +1,123 @@
+:root {
+  --page-bg-color: #282a36;
+  --heading-color: #f8f8f2;
+  --check-btn-color: #ff79c6;
+  --container-bg-color: #bd93f9;
+  --border-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: var(--page-bg-color);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3.2rem;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.palindrome-checker-container,
+.palindrome-definition-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 30%;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 2px solid var(--border-color);
+  border-radius: 2rem;
+  background-color: var(--container-bg-color);
+  text-align: center;
+  max-width: 100%;
+}
+
+.palindrome-checker-container,
+.palindrome-definition-container,
+#check-btn {
+  box-shadow: 3px 3px 3px;
+}
+
+.input-container,
+#text-input,
+#check-btn {
+  max-width: 100%;
+}
+
+#text-input,
+#check-btn {
+  font-family: "Roboto Mono", monospace;
+}
+
+#text-input {
+  padding: 1rem;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid var(--check-btn-color);
+  background-color: var(--container-bg-color);
+  margin-right: 2rem;
+}
+
+#text-input:focus {
+  outline: none;
+  border-right: 2px solid var(--border-color);
+  border-left: 2px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--check-btn-color);
+  box-shadow: 2px 2px 2px;
+}
+
+#check-btn {
+  border-radius: 1rem;
+  padding: 1rem 4rem;
+  background-color: var(--check-btn-color);
+}
+
+#check-btn:hover {
+  cursor: pointer;
+}
+
+#result,
+.palindrome-checker-instructions,
+#text-input,
+#check-btn,
+.palindrome-definition {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 0;
+  }
+
+  .palindrome-checker-container,
+  .palindrome-definition-container {
+    width: 60%;
+  }
+
+  #text-input {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
